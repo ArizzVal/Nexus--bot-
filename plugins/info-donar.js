@@ -7,7 +7,7 @@ let str = `*「 🌟 DONAR 🌟 」*
 ---------------------
 👑 *Creadores del bot*
 💬 wa.me/573027866596
-🦆😉wa.me/542215034412`
+💌wa.me/527294888993`
 
 await conn.sendFile(m.chat, imagen1, 'Curiosity.jpg', str, fkontak)}
 
