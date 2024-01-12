@@ -9,7 +9,7 @@ let str = `*「 🌟 DONAR 🌟 」*
 💬 wa.me/573027866596
 🦆😉wa.me/542215034412`
 
-await conn.sendFile(m.chat, media, 'Curiosity.jpg', str, fkontak)}
+await conn.sendFile(m.chat, imagen1, 'Curiosity.jpg', str, fkontak)}
 
 handler.help = ['donar']
 handler.tags = ['info']
