@@ -1,0 +1,19 @@
+const express = require('express');
+const axios = require('axios');
+const app = express();
+const port = process.env.PORT || 3000;
+
+app.get('/chica', async (req, res) => {
+ try {
+    const response = await axios.get('https://api.fgmods.xyz/api/img/girl?apikey=9ciy6prO');
+    const imgUrl = response.data.url;
+    res.send(`<img src="${imgUrl}" alt="Imagen de una chica">`);
+ } catch (error) {
+    console.error(error);
+    res.status(500).send('Error al obtener la imagen');
+ }
+});
+
+app.listen(port, () => {
+ console.log(`Servidor escuchando en el puerto ${port}`);
+});
