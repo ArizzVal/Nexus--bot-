@@ -1,4 +1,4 @@
-## Nexus_Bot ✨
+## NexusBot ✨
 
 <p align="center">
 <img src="https://telegra.ph/file/839766d5340f5f33838ec.jpg" alt="NexusBot-MD" width="900"/>
