@@ -60,22 +60,15 @@ user.regTime = -1
 }
 
 //--Usuario número
-if (!isNumber(user.afk))
-user.afk = -1
-if (!('afkReason' in user))
-user.afkReason = ''
-if (!('banned' in user))
-user.banned = false
-if (!isNumber(user.warn))
-user.warn = 0
-if (!isNumber(user.level))
-user.level = 0
-if (!('role' in user))
-user.role = 'Novato'
-if (!('autolevelup' in user))
-user.autolevelup = true
-if (!('simi' in user))
-user.simi = false
+if (!isNumber(user.afk)) user.afk = -1
+if (!('afkReason' in user)) user.afkReason = ''
+if (!('banned' in user)) user.banned = false
+if (!isNumber(user.warn)) user.warn = 0
+if (!isNumber(user.level)) user.level = 0
+if (!('role' in user)) user.role = 'Novato'
+if (!('autolevelup' in user)) user.autolevelup = true
+if (!('simi' in user)) user.simi = false
+if (!('muto' in user)) user.muto = false
 } else
 
 global.db.data.users[m.sender] = {
@@ -94,6 +87,7 @@ level: 0,
 role: 'Novato',
 autolevelup: true,
 simi: false,
+muto: false,
 }
 
 let chat = global.db.data.chats[m.chat]
@@ -172,7 +166,6 @@ if (!('restrict' in settings)) settings.restrict = false
 if (!('antiCall' in settings)) settings.antiCall = false
 if (!('antiPrivate' in settings)) settings.antiPrivate = false
 if (!('modejadibot' in settings)) settings.modejadibot = true
-if (!('muto' in user)) user.muto = false
 if (!('status' in settings)) settings.status = 0
 } else global.db.data.settings[this.user.jid] = {
 self: false,
@@ -182,7 +175,6 @@ restrict: false,
 antiCall: false,
 antiPrivate: false,
 modejadibot: true,
-muto: false,
 status: 0
 
 }
@@ -573,10 +565,10 @@ group: '*¡Este comando solo se puede usar en grupos!*',
 private: '*¡Esta función solo se puede utilizar en chat privado!*',
 admin: '*¡Este comando solo puede ser utilizado por admins!*',
 botAdmin: '*¡Para realizar la función debo ser admin!*',
-unreg: '*¡Para continuar con esta función debera registrarse!*\n\n!reg nombre.edad\n\n*Uso correcto* : !reg Eder.21',
+unreg: '*¡Para continuar con esta función debera registrarse!*\n\n!reg nombre.edad\n\n*Uso correcto* : !reg Azami.21',
 restrict: '*¡Esta característica esta desactivada!*'
 }[type]
-if (msg) return conn.reply(m.chat, msg, m, { contextInfo:{ externalAdReply: {title: '🎄'  + saludo + ' ' + nombre, body: dev, sourceUrl: global.channel, thumbnailUrl: fotos }}})
+if (msg) return conn.reply(m.chat, msg, m, { contextInfo:{ externalAdReply: {title: '📖'  + saludo + ' ' + nombre, body: dev, sourceUrl: global.channel, thumbnailUrl: fotos }}})
 
 }
 const file = global.__filename(import.meta.url, true);
